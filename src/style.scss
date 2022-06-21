@@ -20,6 +20,9 @@ a{
   text-decoration: none;
   color: black;
 }
+button{
+  color: black;
+}
 
 .main{
   
@@ -131,7 +134,10 @@ a{
   width: 100%;
   animation: translateTag 10s linear infinite;
   
-
+  .mobileTag{
+    color:black;
+    display:none;
+  }
   .tag-padre{
     display: flex;
     align-items: center;
@@ -145,9 +151,7 @@ a{
       justify-content: space-around;
       width: 50%;
 
-      .tag--h1{
-
-      }
+      
     }
   }
 }
@@ -235,16 +239,16 @@ a{
 
 }
 
-
+$height : 345px;
 
 
 //3d models
 
 .abuelo{
   transform: scale(.9);
-  margin: 3em 2em;
+  margin: 3em auto;
   display: grid;
-  grid-template-columns: repeat(4,350px);
+  grid-template-columns: repeat(4,$height);
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -269,16 +273,17 @@ a{
           text-align: left;
           font-size: 1.3em;
       }
-      .hijo{
+      .hijo, .inifinitetag {
           background-color: rgba(16, 16, 16, 0.301);
           border-radius: 50%;
-          width: 300px;
-          height: 300px;
+          width: $height * 0.9;
+          height: $height * 0.9;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           model-viewer{
+            transform: translateX(10px);
             display: flex;
             align-items: center;
             width: 400px ;
@@ -340,7 +345,7 @@ a{
     gap:0;
 
     .homepage--hero--h1{
-      font-size: 5rem;
+      font-size: 4.5rem;
     }
     .homepage--hero--h3{
       font-size: 1.7rem;
@@ -350,7 +355,7 @@ a{
     .homepage--hero--img{
       img{
         margin: 3em 0;
-        height: 350px;
+        height: 250px;
         width: 100%;
       
       }
@@ -362,8 +367,25 @@ a{
     }
   }
   .inifinitetag{
-    margin-top: 15em;
+    
+    
+    margin-top: 20em;
     font-size: .7rem;
+    .tag-padre{
+      display: none;
+      
+    }
+    .mobileTag{
+      font-size: 1.3rem;
+      padding: 0 1em;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+    }
+    animation: none;
+    
+   
   }
 
 

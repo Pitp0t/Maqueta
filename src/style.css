@@ -22,6 +22,10 @@ a {
   color: black;
 }
 
+button {
+  color: black;
+}
+
 .main {
   height: 50vh;
 }
@@ -102,6 +106,10 @@ a {
   -webkit-animation: translateTag 10s linear infinite;
           animation: translateTag 10s linear infinite;
 }
+.inifinitetag .mobileTag {
+  color: black;
+  display: none;
+}
 .inifinitetag .tag-padre {
   display: flex;
   align-items: center;
@@ -115,6 +123,7 @@ a {
   justify-content: space-around;
   width: 50%;
 }
+
 @-webkit-keyframes translateTag {
   0% {
     transform: translateX(0);
@@ -123,6 +132,7 @@ a {
     transform: translateX(-100%);
   }
 }
+
 @keyframes translateTag {
   0% {
     transform: translateX(0);
@@ -187,9 +197,9 @@ a {
 
 .abuelo {
   transform: scale(0.9);
-  margin: 3em 2em;
+  margin: 3em auto;
   display: grid;
-  grid-template-columns: repeat(4, 350px);
+  grid-template-columns: repeat(4, 345px);
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -211,24 +221,25 @@ a {
   text-align: left;
   font-size: 1.3em;
 }
-.abuelo .padre .hijo {
+.abuelo .padre .hijo, .abuelo .padre .inifinitetag {
   background-color: rgba(16, 16, 16, 0.301);
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 310.5px;
+  height: 310.5px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.abuelo .padre .hijo model-viewer {
+.abuelo .padre .hijo model-viewer, .abuelo .padre .inifinitetag model-viewer {
+  transform: translateX(10px);
   display: flex;
   align-items: center;
   width: 400px;
   height: 400px;
   position: absolute;
 }
-.abuelo .padre .hijo .material-symbols-outlined {
+.abuelo .padre .hijo .material-symbols-outlined, .abuelo .padre .inifinitetag .material-symbols-outlined {
   box-shadow: 1.3px 3.1px 5.3px rgba(0, 0, 0, 0.061), 4.5px 10.5px 17.9px rgba(0, 0, 0, 0.092), 20px 47px 80px rgba(0, 0, 0, 0.13);
   border: 1px solid grey;
   width: -webkit-fit-content;
@@ -261,14 +272,14 @@ a {
     gap: 0;
   }
   .homepage--hero .homepage--hero--h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .homepage--hero .homepage--hero--h3 {
     font-size: 1.7rem;
   }
   .homepage--hero .homepage--hero--img img {
     margin: 3em 0;
-    height: 350px;
+    height: 250px;
     width: 100%;
   }
   .homepage--hero .buttonContainer {
@@ -276,8 +287,21 @@ a {
   }
 
   .inifinitetag {
-    margin-top: 15em;
+    margin-top: 20em;
     font-size: 0.7rem;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .inifinitetag .tag-padre {
+    display: none;
+  }
+  .inifinitetag .mobileTag {
+    font-size: 1.3rem;
+    padding: 0 1em;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
   }
 
   .abuelo {
