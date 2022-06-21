@@ -1,0 +1,375 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.8rem;
+  font-weight: 300;
+  
+  overflow-x: hidden !important;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.main{
+  
+
+  height: 50vh;
+}
+
+
+
+
+
+//HEADER
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2em;
+  background-color: white;
+  box-shadow:0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%); 
+  top: 0;
+  width: 100%;
+
+  .header--logo{
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  
+  
+  .header--nav{
+    display: flex;
+    gap: 20px;
+
+    &>li{
+      list-style: none;
+      a{
+       
+        cursor: pointer;
+        &:hover{
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
+
+}
+
+//HOMPAGE HERO
+.homepage--hero {
+  
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  width: 100%;
+  height: 600px;
+  
+  .homepage--hero--h1{
+    font-size: 8rem;
+    line-height: .9;
+  }
+  .homepage--hero--h3{
+    margin-top: 1em;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  .buttonContainer{
+    margin-top: 2em;
+    display: flex;
+    gap: 10px;
+
+    button{
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: .8em 1.5em;
+      border-radius: .5em;
+      border: none;
+      &:hover{
+        transform: scale(1.05);
+        transition: transform .5s;
+      }
+    }
+
+    
+
+    
+
+    
+  }
+  .homepage--hero--img{
+    img{
+      width: 770px;
+      height: 550px;
+      object-fit: cover;
+    }
+  }
+}
+
+//inifinite TAG
+
+
+.inifinitetag{
+ 
+  font-size: .9rem;
+  width: 100%;
+  animation: translateTag 10s linear infinite;
+  
+
+  .tag-padre{
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    .tag-hijo{
+      
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+
+      .tag--h1{
+
+      }
+    }
+  }
+}
+
+@keyframes translateTag {
+  0%{
+    transform:translateX(0)
+  }
+  100%{
+    transform:translateX(-100%)
+  }
+}
+
+//REGISTRATION PAGE
+.registration{
+ 
+  height: 50vh;
+  // background: rgb(131,58,180);
+  // background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  
+}
+
+//FORM
+
+
+.form{
+  margin:  auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+  gap: 15px;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  border-radius: 2em;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  background-color: white;
+  transform: scale(0.9);
+  .form--logo{
+    height: 250px;
+    width: 250px;
+  }
+  
+  
+  .form--buttonContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  
+  
+  .form--input{
+    width: 100%;
+    padding: 1em;
+  }
+  
+  .form--button{
+    
+    padding:.5em;
+  }
+  
+}
+
+
+
+
+//footer
+
+
+.footer{
+  margin-top: 30vh;
+  height: 15vh;
+ 
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  h5{
+    font-weight: 300 ;
+  }
+  
+
+}
+
+
+
+
+//3d models
+
+.abuelo{
+  transform: scale(.9);
+  margin: 3em 2em;
+  display: grid;
+  grid-template-columns: repeat(4,350px);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  
+  .padre{
+      padding: 2em 1em;
+      background-color: white;
+      box-shadow:
+          3.7px 2.5px 5.3px rgba(0, 0, 0, 0.028),
+          12.5px 8.3px 17.9px rgba(0, 0, 0, 0.042),
+          56px 37px 80px rgba(0, 0, 0, 0.07);
+      border-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      
+      .padre--price{
+          color:rgb(4, 4, 4);
+          font-weight: bold;
+          text-align: left;
+          font-size: 1.3em;
+      }
+      .hijo{
+          background-color: rgba(16, 16, 16, 0.301);
+          border-radius: 50%;
+          width: 300px;
+          height: 300px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          model-viewer{
+            display: flex;
+            align-items: center;
+            width: 400px ;
+            height: 400px ;
+            position: absolute;
+
+          }
+
+          
+          .material-symbols-outlined{
+              box-shadow:
+              1.3px 3.1px 5.3px rgba(0, 0, 0, 0.061),
+              4.5px 10.5px 17.9px rgba(0, 0, 0, 0.092),
+              20px 47px 80px rgba(0, 0, 0, 0.13)
+            ;
+              border: 1px solid grey;
+              width: fit-content;
+              border-radius: 50%;
+              padding: .1em;
+              position: absolute;
+              top:0;
+              right: 0;
+              cursor: pointer;
+          }
+      }
+      .padre--titulo{
+          margin-top: .5em;
+      }
+      .padre--boton{
+          margin-top: 1em;
+          padding: .5em 1em;
+          border-radius: .5em;
+          border-style: none;
+          
+      }
+
+
+      &:hover{
+          box-shadow:
+            1.3px 3.1px 5.3px rgba(0, 0, 0, 0.061),
+            4.5px 10.5px 17.9px rgba(0, 0, 0, 0.092),
+            20px 47px 80px rgba(0, 0, 0, 0.13)
+          ;
+      }
+
+  }
+
+  
+}
+
+//LOS MALIDTOS MEDIA QUERYS
+
+
+@media screen and  (max-width: 800px) {
+  .homepage--hero{
+    
+    flex-direction: column-reverse;
+    text-align: center;
+    gap:0;
+
+    .homepage--hero--h1{
+      font-size: 5rem;
+    }
+    .homepage--hero--h3{
+      font-size: 1.7rem;
+    }
+
+
+    .homepage--hero--img{
+      img{
+        margin: 3em 0;
+        height: 350px;
+        width: 100%;
+      
+      }
+    }
+
+    .buttonContainer{
+      justify-content: center;
+     
+    }
+  }
+  .inifinitetag{
+    margin-top: 15em;
+    font-size: .7rem;
+  }
+
+
+  .abuelo{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(1,350px);
+  }
+} 
