@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Maqueta.git/static/css/main.706a570c.css",
+    "main.js": "/Maqueta.git/static/js/main.599658fb.js",
+    "static/media/cabeza.glb": "/Maqueta.git/static/media/cabeza.e43969d57c331a262a06.glb",
+    "static/media/Cabezapng.png": "/Maqueta.git/static/media/Cabezapng.e9b0c850f804d47d2e5b.png",
+    "static/media/1.svg": "/Maqueta.git/static/media/1.a89f0ea4cf6e01360e160cc7333a9964.svg",
+    "index.html": "/Maqueta.git/index.html",
+    "main.706a570c.css.map": "/Maqueta.git/static/css/main.706a570c.css.map",
+    "main.599658fb.js.map": "/Maqueta.git/static/js/main.599658fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.706a570c.css",
+    "static/js/main.599658fb.js"
+  ]
+}
